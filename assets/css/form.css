@@ -1,0 +1,48 @@
+.bg {
+  background-image: url("../static/pattern-bg.png");
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+.form {
+  text-align: center;
+  padding-top: 1rem;
+}
+.form input {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 40%;
+  margin-top: 1rem;
+  font-size: 18px;
+}
+.btn {
+  cursor: pointer;
+  padding: 1.2rem;
+  background-color: black;
+  border: none;
+  border-radius: 0px 14px 14px 0px;
+  width: 3rem;
+  transform: translateX(-0.7rem);
+  height: 100%;
+}
+.btn:hover {
+  background-color: #3f3f3f;
+}
+
+@media screen and (max-width: 835px) {
+  .form input {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .form input {
+    width: 80%;
+    font-size: 15px;
+  }
+  .btn {
+    padding: 1.1rem;
+  }
+}

@@ -1,0 +1,54 @@
+.container {
+  font-family: "Roboto";
+  background: #f5f5f5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "title title" "img description";
+  grid-template-rows: auto;
+  row-gap: 20px;
+  column-gap: 20px;
+  height: 100vh;
+  align-items: center;
+}
+.title {
+  grid-area: title;
+}
+.img {
+  grid-area: img;
+  border: 1px solid red;
+  text-align: center;
+}
+.description {
+  grid-area: description;
+}
+
+span {
+  padding-left: 2rem;
+  font-size: 1.7rem;
+}
+
+.description h1 {
+  font-size: 3rem;
+  padding-bottom: 2.5rem;
+}
+
+.description p {
+  width: 50%;
+  padding-bottom: 2rem;
+}
+
+.description button {
+  padding: 0.7rem 2rem 0.7rem 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-areas: "title title" "img img" "description description";
+  }
+  .description {
+    text-align: center;
+  }
+  .description p {
+    width: 100%;
+  }
+}
