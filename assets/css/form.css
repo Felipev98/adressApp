@@ -33,6 +33,9 @@
 }
 
 @media screen and (max-width: 835px) {
+  .form{
+  transform: translateX(10px);
+  }
   .form input {
     width: 70%;
   }

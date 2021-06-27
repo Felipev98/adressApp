@@ -1,0 +1,56 @@
+.resultados{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+.resultados-card{
+    z-index: 999;
+    top: -2rem;
+    position: absolute;
+    list-style: none;
+    background-color: #ffff;
+    width: 80%;
+    display: flex;
+    height: 8rem;
+    border-radius: 1rem;
+    
+
+}
+.resultado-contenido{
+    width: 25%;
+    margin: auto;
+    padding-left: 2rem;
+    border-right: 1px solid black;
+    height: 4rem;
+}
+.resultado-contenido:last-child{
+    border-right: 0;
+}
+.resultado-titulo{
+    font-size: 0.9rem;
+    color: #a2a4af;
+}
+.resultado-ip{
+    padding-top: 0.3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+/* Media Queries */
+
+@media screen and (max-width:793px) {
+    .resultados-card{
+        flex-direction: column;
+        height: auto;
+        border-right: 0;
+        width: 94%;
+        padding-top: 1rem;
+    }
+    .resultado-contenido{
+        border-right: 0;
+        width: 14rem;
+        text-align: center;
+        padding-left: 0;
+
+    }
+}
