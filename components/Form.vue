@@ -1,8 +1,8 @@
 <template>
-  <form @submit.prevent="adressIp" class="form">
+  <form @submit.prevent="searchIpAddress(ip)" class="form">
     <input
       v-model.trim="ip"
-      type="text"
+      type="search"
       placeholder="Search for any IP Adress or domain"
     />
     <button type="submit" class="btn">
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   data() {
     return {
@@ -19,9 +20,7 @@ export default {
     };
   },
   methods: {
-    adressIp() {
-      console.log(this.ip);
-    }
+    ...mapActions(["searchIpAddress"])
   }
 };
 </script>
