@@ -1,0 +1,25 @@
+.message {
+  width: 50%;
+  margin: auto;
+  height: auto;
+  text-align: center;
+}
+
+.message h3 {
+  padding-bottom: 0.5rem;
+  font-size: 1.7rem;
+}
+.message p {
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 794px) {
+  .message p {
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 535px) {
+  .message h3 {
+    font-size: 1.4rem;
+  }
+}

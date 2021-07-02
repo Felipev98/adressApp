@@ -1,33 +1,38 @@
 <template>
   <div class="resultados">
-      <ul class="resultados-card">
-            <div class="resultado-contenido">
-            <span class="resultado-titulo">IP ADRESS</span>
-            <p class="resultado-ip">192.168.1.1</p>
-            </div>
-            <li class="resultado-contenido">
-            <span class="resultado-titulo">LOCATION</span>
-            <p class="resultado-ip">Narnia</p>
-          </li>
-            <li class="resultado-contenido">
-            <span class="resultado-titulo">TIMEZONE</span>
-            <p class="resultado-ip">UTC-05:00</p>
-          </li>
-            <li class="resultado-contenido">
-            <span class="resultado-titulo">CANTV</span>
-            <p class="resultado-ip">O</p>
-          </li>
-      </ul>
+    <img v-if="loader" class="loader" src="@/static/loader.svg" alt="loader" />
+    <ul v-if="ip" class="resultados-card">
+      <li class="resultado-contenido">
+        <span class="resultado-titulo">IP ADRESS</span>
+        <p class="resultado-ip">{{ ip.ip }}</p>
+      </li>
+      <li class="resultado-contenido">
+        <span class="resultado-titulo">LOCATION</span>
+        <p class="resultado-ip">
+          {{ ip.location.city }}, {{ ip.location.region }}
+          {{ ip.location.postalCode }}
+        </p>
+      </li>
+      <li class="resultado-contenido">
+        <span class="resultado-titulo">TIMEZONE</span>
+        <p class="resultado-ip">UTC{{ ip.location.timezone }}</p>
+      </li>
+      <li class="resultado-contenido">
+        <span class="resultado-titulo">ISP</span>
+        <p class="resultado-ip">{{ ip.isp }}</p>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
-    name:"Card"
-
-}
+  name: "Card",
+  computed: {
+    ...mapState(["ip", "loader"])
+  }
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -1,0 +1,10 @@
+.loader {
+  z-index: 999;
+  top: -2rem;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 80%;
+  height: 8rem;
+  padding: 1rem 0;
+  border-radius: 1rem;
+}

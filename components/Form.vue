@@ -1,5 +1,9 @@
 <template>
-  <form @submit.prevent="searchIpAddress(ip)" class="form">
+  <form
+    :onchange="searchIp(ip)"
+    @submit.prevent="searchIpAddress(ip)"
+    class="form"
+  >
     <input
       v-model.trim="ip"
       type="search"
@@ -20,7 +24,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["searchIpAddress"])
+    ...mapActions(["searchIpAddress", "searchIp"])
   }
 };
 </script>
