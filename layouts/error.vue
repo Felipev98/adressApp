@@ -4,16 +4,16 @@
       <span>{{ message }}</span>
     </div>
     <div class="img">
-      <img src="@/static/error.png" width="540" height="480" alt="404" />
+      <img src="@/static/error.png" width="540" height="447" alt="404" />
     </div>
     <div class="description">
-      <h1>Tengo malas noticias para ti</h1>
+      <h1>I have bad news for you</h1>
       <p>
-        La página que buscas podría estar eliminada o no estar disponible
-        temporalmente
+        The page you are looking for might be removed or is temporarily
+        unavailable
       </p>
       <nuxt-link to="/">
-        <button>Volver</button>
+        <button>Back to homepage</button>
       </nuxt-link>
     </div>
   </article>
@@ -30,7 +30,7 @@ export default {
   },
   data() {
     return {
-      pageNotFound: "404 Not Found",
+      pageNotFound: "404 NOT FOUND",
       otherError: "An error occurred"
     };
   },
