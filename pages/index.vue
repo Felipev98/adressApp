@@ -3,7 +3,8 @@
     <Header />
     <CardError v-if="error" />
     <Card v-else />
-    <Mapa />
+     <CardError v-if="error" />
+    <Mapa v-else />
   </main>
 </template>
 <script>
