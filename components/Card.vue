@@ -5,6 +5,7 @@
       <li class="resultado-contenido">
         <span class="resultado-titulo">IP ADRESS</span>
         <p class="resultado-ip">{{ ip.ip }}</p>
+        
       </li>
       <li class="resultado-contenido">
         <span class="resultado-titulo">LOCATION</span>

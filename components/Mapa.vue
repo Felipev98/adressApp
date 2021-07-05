@@ -1,19 +1,34 @@
 <template>
-<div id="map-wrap" style="height: 83vh">
- <client-only>
-   <l-map :zoom=13 :center="[55.9464418,8.1277591]">
+<div id="map-wrap" style="height: 68vh">
+ <client-only v-if="ip">
+   <l-map :zoom=15 :center="coordenadas()">
      <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
-     <l-marker :lat-lng="[22.9464,3.1277591]"></l-marker>
+      <l-marker :lat-lng="coordenadas()">
+      <l-popup>Aquí estoy</l-popup>
+     </l-marker>
    </l-map>
+   
  </client-only>
+          
 </div>
+
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
     name: 'Mapa',
   data () {
     return {
+    }
+  },
+  computed:{
+      ...mapState(["ip","loader"])
+
+  },
+  methods:{
+    coordenadas: function(){
+      return [this.ip.location.lat, this.ip.location.lng]
     }
   }
 }
