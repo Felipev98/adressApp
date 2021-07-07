@@ -7,6 +7,9 @@
         ></l-tile-layer>
         <l-marker :lat-lng="coordenadas()">
           <l-popup>Your IP is here</l-popup>
+          <l-icon
+            iconUrl="https://res.cloudinary.com/dlgvxohur/image/upload/v1625674814/proyectos/ip-address-tracker/icon.svg"
+          ></l-icon>
         </l-marker>
       </l-map>
     </client-only>
@@ -17,9 +20,6 @@
 import { mapState } from "vuex";
 export default {
   name: "Mapa",
-  data() {
-    return {};
-  },
   computed: {
     ...mapState(["ip", "loader"])
   },
