@@ -1,26 +1,24 @@
 # IP Address Tracker
+![Iptracker](https://user-images.githubusercontent.com/83327665/125209675-83c2f400-e268-11eb-8d58-c35c9562cd4a.gif)
 
-IP Address Tracking app
+_IP Address Tracking app_
 
-## Authors
+## Authors 🧑‍💼
 
 - [@Felipev98](https://github.com/Felipev98/)
 - [@g1alexander](https://github.com/g1alexander/)
 
-## Technologies
+## Technologies 🛠️
+_Client:_
+* Nuxt JS 
+* leafletjs
 
-**Client:** Nuxt JS, leafletjs
-
-## Features
+## Features 📌
 
 - Geolocation
 - Responsive Design
 
-## Screenshot
-
-![App Screenshot](https://res.cloudinary.com/dlgvxohur/image/upload/v1625601352/proyectos/ip-address-tracker/portada.jpg)
-
-## Build Setup
+## Build Setup 📦
 
 ```bash
 # install dependencies
