@@ -29,9 +29,5 @@ export default {
 };
 </script>
 <style>
-@media screen and (max-width:900px){
-  .form{
-    transform: translateX(1px);
-  }
-}
+
 </style>
